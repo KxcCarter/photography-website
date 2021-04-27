@@ -5,6 +5,7 @@ const LandingAbout = (props) => {
   return (
     <Wrapper>
       <div className="about">
+        <h1>H. Raymond Carter</h1>
         <p>
           Born into a musical family, Kenneth began playing music at the age of
           5. He played the cello in orchestras throughout his teenage years,
