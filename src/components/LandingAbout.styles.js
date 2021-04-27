@@ -25,17 +25,43 @@ export const Wrapper = styled.div`
     margin: auto;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 780px) {
     .about {
       width: 80%;
     }
+
+    .about h1 {
+      font-size: 3rem;
+    }
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 625px) {
     /* aspect-ratio: 4/5; */
 
     .about {
       width: 95%;
+    }
+
+    .about h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (max-width: 415px) {
+    /* aspect-ratio: 4/5; */
+
+    .about {
+      width: 95%;
+    }
+
+    .about h1 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .about p {
+      font-size: 0.9rem;
+      line-height: 1.15rem;
     }
   }
 `;

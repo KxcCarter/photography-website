@@ -6,19 +6,21 @@ export const GlobalStyle = createGlobalStyle`
     } */
 body {
     background-color: #121212;
+    color: #f4f4f4;
     font-family: 'Cormorant', serif;
 
 }
 
 h1 {
     letter-spacing: 0.3rem;
+    font-size: 3.75rem;
 }
 
     p {
         font-size: 0.9rem;
         font-weight: lighter;
         line-height: 1.85rem;
-        color: #f4f4f4;
+        
     }
 
 
@@ -27,7 +29,7 @@ h1 {
     
 
     h1 {
-        font-size: 5rem;
+        
         font-weight: lighter;
         
     }

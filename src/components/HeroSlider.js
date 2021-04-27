@@ -7,6 +7,9 @@ const HeroSlider = (props) => {
     <Wrapper>
       <div className="view-container">
         <img className="image" src={photo} alt="Victor Portrait" />
+        <div class="center">
+          <h1>Style</h1>
+        </div>
       </div>
     </Wrapper>
   );
