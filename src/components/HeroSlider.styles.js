@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   max-width: 100vw;
-  /* height: 100vh; */
+  /* height: 70vh; */
   background: #ebfeff;
   border-radius: 10px;
   border: 2px solid #0085a3;
@@ -13,14 +13,20 @@ export const Wrapper = styled.div`
   aspect-ratio: 16/9;
   overflow: hidden;
 
-  p {
-    font-size: 1rem;
-  }
-
   .view-container img {
     max-width: 100%;
     /* max-height: 100%; */
     /* object-fit: contain; */
+  }
+
+  @media (max-width: 1024px) {
+    aspect-ratio: 4/4;
+
+    .view-container img {
+      max-width: 100%;
+      max-height: 100%;
+      /* object-fit: contain; */
+    }
   }
 
   @media (max-width: 600px) {

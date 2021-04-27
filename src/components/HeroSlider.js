@@ -1,12 +1,12 @@
 import React from 'react';
 import { Wrapper } from './HeroSlider.styles';
-import photo from '../images/image1.jpg';
+import photo from '../images/image2.jpg';
 
 const HeroSlider = (props) => {
   return (
     <Wrapper>
       <div className="view-container">
-        <img className="image" src={photo} alt="it is a thing of me" />
+        <img className="image" src={photo} alt="Victor Portrait" />
       </div>
     </Wrapper>
   );
