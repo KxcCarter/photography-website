@@ -1,7 +1,6 @@
 import { GlobalStyle, Wrapper } from './App.styles';
 import Copyright from './components/Copyright';
 
-// import HeroSlider from './components/HeroSlider';
 import Landing from './pages/Landing';
 
 function App() {

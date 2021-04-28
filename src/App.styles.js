@@ -1,9 +1,7 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-/* html {
-        height: 100%;
-    } */
+
     body {
         background-color: #121212;
         color: #f4f4f4;
@@ -14,7 +12,8 @@ export const GlobalStyle = createGlobalStyle`
 
         display: flex;
         flex-direction: column;
-        align-items: center;
+        /* align-items: center; */
+        justify-content: center;
 
     }
 
@@ -23,6 +22,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     h1 {
+        user-select: none;
         letter-spacing: 0.3rem;
         font-size: 3.75rem;
         color: rgba(244, 244, 244, 0.75);
