@@ -54,24 +54,22 @@ export const Wrapper = styled.div`
     position: absolute;
     display: flex;
     bottom: 30px;
-    /* left: 50%; */
-    margin: auto;
+    left: 50%;
     transform: translateX(-50%);
   }
   /* This entire rule is from the video */
   .view-container .navigation .navBtn {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.9);
     width: 12px;
     height: 12px;
     margin: 10px;
     border-radius: 50%;
     cursor: pointer;
-
     position: relative;
-    left: 500px;
   }
 
-  /* Don't touch these three */
+  /* MY STYLES */
+  /* Don't touch these*/
   .title-center {
     position: absolute;
     top: 12px;
@@ -96,9 +94,32 @@ export const Wrapper = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     transition: font-size 3s ease-in-out;
     background: rgba(0, 0, 0, 0.1);
+  }
+
+  .arrow {
+    position: absolute;
+    z-index: 101;
+    top: 50%;
+    font-size: 3rem;
+    opacity: 50%;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .arrow:hover {
+    box-shadow: 1px 2px 3px rgba(10, 10, 10, 0.4);
+    border-radius: 50%;
+    color: rgba(210, 210, 210, 0.9);
+  }
+
+  .arrow-left {
+    left: 16px;
+  }
+
+  .arrow-right {
+    right: 16px;
   }
 
   /* MEDIA QUERIES */

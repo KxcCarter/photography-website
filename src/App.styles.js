@@ -22,6 +22,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     h1 {
+        user-select: none;
         letter-spacing: 0.3rem;
         font-size: 3.75rem;
         color: rgba(244, 244, 244, 0.75);

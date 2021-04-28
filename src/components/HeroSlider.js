@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Wrapper } from './HeroSlider.styles';
 import { IMAGES } from '../photoApi/API';
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 const HeroSlider = (props) => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   const imageSlides = IMAGES.map((item, index) => (
     <div className="slide" key={index}>
       <img className="image" src={item.img} alt={item.altText} />
@@ -22,6 +25,23 @@ const HeroSlider = (props) => {
     );
   };
 
+  const nextSlide = () => {
+    setCurrentSlide(currentSlide === IMAGES.length - 1 ? 0 : currentSlide + 1);
+  };
+  const prevSlide = () => {
+    setCurrentSlide(currentSlide === 0 ? IMAGES.length - 1 : currentSlide - 1);
+  };
+  console.log(currentSlide);
+
+  //   useEffect(() => {
+  //     const autoSlide = setInterval(() => {
+  //       nextSlide();
+  //     }, 1000);
+  //     return () => {
+  //       clearInterval(autoSlide);
+  //     };
+  //   }, [currentSlide]);
+
   const navButtons = IMAGES.map((item, index) => <NavButtons key={index} />);
 
   return (
@@ -30,10 +50,19 @@ const HeroSlider = (props) => {
         <div className="title-center">
           <h1>H. Raymond Carter Photography</h1>
         </div>
-
         {imageSlides}
+        <div className="nav-arrows">
+          <FaArrowAltCircleLeft
+            className="arrow arrow-left"
+            onClick={prevSlide}
+          />
+          <FaArrowAltCircleRight
+            className="arrow arrow-right"
+            onClick={nextSlide}
+          />
+        </div>
 
-        <div className="navigation">{navButtons}</div>
+        {/* <div className="navigation">{navButtons}</div> */}
       </div>
     </Wrapper>
   );
