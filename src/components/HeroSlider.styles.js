@@ -35,11 +35,11 @@ export const Wrapper = styled.div`
   }
 
   /* These are my rules */
-  /* .view-container img {
-    max-width: 100%;
-    object-fit: fill;
+  .view-container img {
+    /* max-width: 100%; */
+    /* object-fit: fill; */
     transform: translateY(-25%);
-  } */
+  }
 
   /* I probably don't need this */
   .view-container .slide .info-center {

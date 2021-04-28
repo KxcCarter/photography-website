@@ -1,22 +1,9 @@
 import React, { useState } from 'react';
 import { Wrapper } from './HeroSlider.styles';
-
-import photo1 from '../images/image1.jpg';
-import photo2 from '../images/image2.jpg';
-import photo3 from '../images/image3.jpg';
-import photo4 from '../images/image4.jpg';
-import photo5 from '../images/image5.jpg';
-
-const IMAGES = [
-  { img: photo1, altText: 'Style' },
-  { img: photo2, altText: 'Class' },
-  { img: photo3, altText: 'Elegance' },
-  { img: photo4, altText: 'Intensity' },
-  { img: photo5, altText: 'Sophistication' },
-];
+import { IMAGES } from '../photoApi/API';
 
 const HeroSlider = (props) => {
-  const renderedImages = IMAGES.map((item, index) => (
+  const imageSlides = IMAGES.map((item, index) => (
     <div className="slide" key={index}>
       <img className="image" src={item.img} alt={item.altText} />
       <div className="info-center">
@@ -24,10 +11,6 @@ const HeroSlider = (props) => {
       </div>
     </div>
   ));
-
-  //   const manualNav = (manual) => {
-  //     renderedImages[manual];
-  //   };
 
   const NavButtons = () => {
     const [activeClass, setActiveClass] = useState('');
@@ -39,7 +22,7 @@ const HeroSlider = (props) => {
     );
   };
 
-  const navButtons = IMAGES.map((item, index) => <NavButtons />);
+  const navButtons = IMAGES.map((item, index) => <NavButtons key={index} />);
 
   return (
     <Wrapper>
@@ -48,24 +31,9 @@ const HeroSlider = (props) => {
           <h1>H. Raymond Carter Photography</h1>
         </div>
 
-        {renderedImages}
+        {imageSlides}
 
-        {/* <div className="slide">
-          <img className="image" src={photo1} alt="Victor Portrait" />
-          <div className="info-center">
-            <h1>Style</h1>
-          </div>
-        </div> */}
-
-        <div className="navigation">
-          {/* <div className="navBtn"></div>
-          <div className="navBtn"></div>
-          <div className="navBtn"></div>
-          <div className="navBtn"></div>
-          <div className="navBtn"></div> */}
-
-          {navButtons}
-        </div>
+        <div className="navigation">{navButtons}</div>
       </div>
     </Wrapper>
   );
