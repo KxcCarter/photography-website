@@ -14,6 +14,7 @@ const LandingAbout = (props) => {
           and shortly after that his first orchestral piece was debuted by the
           Heritage Philharmonic.
         </p>
+        <hr />
         <p>
           Kenneth studied music theory and jazz privately for 7 years with Phil
           Rogers and attended the Conservatory of Music and Dance at UMKC for

@@ -1,4 +1,5 @@
 import { GlobalStyle, Wrapper } from './App.styles';
+import Copyright from './components/Copyright';
 
 // import HeroSlider from './components/HeroSlider';
 import Landing from './pages/Landing';
@@ -10,6 +11,7 @@ function App() {
       <Wrapper>
         <Landing />
         <h1>lol what?</h1>
+        <Copyright />
       </Wrapper>
     </>
   );
