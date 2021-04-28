@@ -26,12 +26,25 @@ export const Wrapper = styled.div`
     position: absolute;
     width: 100%;
   }
+
+  .hidden {
+    opacity: 0;
+    transform: scale(1.25);
+  }
+
+  .active {
+    opacity: 1;
+    transition-duration: 2s;
+    transform: scale(1);
+  }
+
   /* This entire rule is from the video */
   /* This seems to only be for applying rounded edges, which I don't want */
   .view-container .slide img {
     z-index: 10;
     width: 100%;
     border-radius: 5px;
+    /* opacity: 0; */
   }
 
   /* These are my rules */
@@ -70,6 +83,7 @@ export const Wrapper = styled.div`
 
   /* MY STYLES */
   /* Don't touch these*/
+
   .title-center {
     position: absolute;
     top: 12px;
@@ -87,15 +101,14 @@ export const Wrapper = styled.div`
   }
 
   .info-center {
-    position: absolute;
+    position: relative;
     font-size: 5rem;
     letter-spacing: 0.7rem;
     font-weight: normal;
     top: 50%;
     left: 50%;
+    z-index: 100;
     transform: translate(-50%, -50%);
-    transition: font-size 3s ease-in-out;
-    background: rgba(0, 0, 0, 0.1);
   }
 
   .arrow {
