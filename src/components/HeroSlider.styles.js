@@ -3,24 +3,75 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   max-width: 100vw;
 
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25); */
   text-align: center;
   overflow: hidden;
 
+  /* In video this is equivalent to .img-slider - aka the outer div */
   .view-container {
-    /* position: absolute; */
-    /* left: 50%; */
-    max-height: 700px;
-    /* margin: auto; */
+    /* Uncomment these to return to my styles */
+    /* max-height: 700px; */
+
+    /* Additions from video below */
+
+    position: relative;
+    width: 100%;
+    height: 700px;
+    /* margin: 10px; */
   }
 
-  .view-container img {
+  /* This entire rule is from the video */
+  .view-container .slide {
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+  }
+  /* This entire rule is from the video */
+  /* This seems to only be for applying rounded edges, which I don't want */
+  .view-container .slide img {
+    z-index: 10;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  /* These are my rules */
+  /* .view-container img {
     max-width: 100%;
-    /* height: 80%; */
     object-fit: fill;
     transform: translateY(-25%);
+  } */
+
+  /* I probably don't need this */
+  .view-container .slide .info-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
   }
 
+  /* This entire rule is from the video */
+  .view-container .navigation {
+    z-index: 20;
+    position: absolute;
+    display: flex;
+    bottom: 30px;
+    /* left: 50%; */
+    margin: auto;
+    transform: translateX(-50%);
+  }
+  /* This entire rule is from the video */
+  .view-container .navigation .navBtn {
+    background: rgba(255, 255, 255, 0.5);
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    position: relative;
+    left: 500px;
+  }
+
+  /* Don't touch these three */
   .title-center {
     position: absolute;
     top: 12px;
@@ -37,7 +88,7 @@ export const Wrapper = styled.div`
     color: rgba(244, 244, 244, 0.45);
   }
 
-  .center {
+  .info-center {
     position: absolute;
     font-size: 5rem;
     letter-spacing: 0.7rem;
@@ -47,17 +98,18 @@ export const Wrapper = styled.div`
     transform: translate(-50%, -50%);
 
     transition: font-size 3s ease-in-out;
+    background: rgba(0, 0, 0, 0.1);
   }
 
+  /* MEDIA QUERIES */
   @media (max-width: 1024px) {
     aspect-ratio: 4/4;
 
     .view-container img {
-      max-width: 100%;
       max-height: 100%;
     }
 
-    .center {
+    .info-center {
       transform: translate(-50%, -90%);
       font-size: 6rem;
     }
@@ -78,11 +130,11 @@ export const Wrapper = styled.div`
     aspect-ratio: 4/5;
 
     .view-container img {
-      max-width: 100%;
       max-height: 100%;
       transform: translateY(0);
     }
 
+    /* Not sure if I need a rule for .image and img */
     .image {
       width: 100%;
       height: 100%;
