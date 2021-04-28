@@ -31,21 +31,6 @@ export const Wrapper = styled.div`
   }
 
   /* TEXT */
-  .title-center {
-    position: absolute;
-    top: 12px;
-    left: 0;
-    width: 100%;
-    font-size: 1rem;
-    z-index: 30;
-  }
-
-  .title-center h1 {
-    margin: auto;
-    font-size: 2rem;
-    letter-spacing: 1rem;
-    color: rgba(244, 244, 244, 0.45);
-  }
 
   .info-center h1 {
     position: absolute;
@@ -106,11 +91,6 @@ export const Wrapper = styled.div`
   }
 
   @media (max-width: 800px) {
-    .title-center h1 {
-      font-size: 2rem;
-      letter-spacing: 0.4rem;
-    }
-
     .arrow {
       font-size: 2rem;
     }
@@ -132,11 +112,6 @@ export const Wrapper = styled.div`
 
     h1 {
       font-size: 1rem;
-    }
-
-    .title-center h1 {
-      font-size: 1.2rem;
-      letter-spacing: 0.2rem;
     }
 
     .info-center h1 {
