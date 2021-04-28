@@ -4,6 +4,7 @@ export const Wrapper = styled.div`
   max-width: 100vw;
   text-align: center;
   overflow: hidden;
+  padding-bottom: -20px;
 
   .view-container {
     position: relative;
@@ -51,18 +52,19 @@ export const Wrapper = styled.div`
     font-size: 5rem;
     letter-spacing: 0.7rem;
     font-weight: normal;
-    top: 300px;
+    top: 450px;
     left: 50%;
     z-index: 30;
     transform: translate(-50%, -50%);
   }
 
   /* NAVIGATION */
+
   .arrow {
     position: absolute;
     z-index: 101;
-    top: 50%;
-    font-size: 3rem;
+    top: 75%;
+    font-size: 2.5rem;
     opacity: 50%;
     cursor: pointer;
     user-select: none;
@@ -108,6 +110,10 @@ export const Wrapper = styled.div`
       font-size: 2rem;
       letter-spacing: 0.4rem;
     }
+
+    .arrow {
+      font-size: 2rem;
+    }
   }
 
   @media (max-width: 600px) {
@@ -135,6 +141,12 @@ export const Wrapper = styled.div`
 
     .info-center h1 {
       font-size: 2rem;
+      top: 50%;
+    }
+
+    .arrow {
+      font-size: 1.6rem;
+      top: 50%;
     }
   }
 `;

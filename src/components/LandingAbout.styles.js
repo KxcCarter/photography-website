@@ -8,11 +8,12 @@ export const Wrapper = styled.div`
   border: 2px solid #0085a3;
   /* get rid of border  */
   color: #f4f4f4;
-  padding: 40px 20px;
+  padding: 0 20px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
   text-align: center;
 
   .about {
+    padding-top: 0;
     width: 70%;
     max-height: auto;
     margin: auto;
@@ -28,6 +29,7 @@ export const Wrapper = styled.div`
     }
 
     .about h1 {
+      padding-top: 0;
       font-size: 3rem;
     }
   }

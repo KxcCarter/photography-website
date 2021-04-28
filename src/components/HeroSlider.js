@@ -32,11 +32,11 @@ const HeroSlider = (props) => {
   useEffect(() => {
     const autoSlider = setTimeout(() => {
       nextSlide();
-    }, 5000);
+    }, 6000);
     return () => {
       clearTimeout(autoSlider);
     };
-  }, [currentSlide]);
+  }, [currentSlide, nextSlide]);
 
   return (
     <Wrapper>
