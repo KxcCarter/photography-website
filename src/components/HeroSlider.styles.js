@@ -2,88 +2,34 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   max-width: 100vw;
-
-  /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25); */
   text-align: center;
   overflow: hidden;
 
-  /* In video this is equivalent to .img-slider - aka the outer div */
   .view-container {
-    /* Uncomment these to return to my styles */
-    /* max-height: 700px; */
-
-    /* Additions from video below */
-
     position: relative;
     width: 100%;
     height: 700px;
-    /* margin: 10px; */
   }
 
-  /* This entire rule is from the video */
-  .view-container .slide {
-    z-index: 10;
-    position: absolute;
-    width: 100%;
-  }
-
-  .hidden {
+  .slide {
     opacity: 0;
     transform: scale(1.25);
+    transition-duration: 2s ease-in-out;
   }
 
   .active {
     opacity: 1;
-    transition-duration: 2s;
     transform: scale(1);
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
   }
 
-  /* This entire rule is from the video */
-  /* This seems to only be for applying rounded edges, which I don't want */
-  .view-container .slide img {
-    z-index: 10;
-    width: 100%;
-    border-radius: 5px;
-    /* opacity: 0; */
-  }
-
-  /* These are my rules */
   .view-container img {
-    /* max-width: 100%; */
-    /* object-fit: fill; */
+    max-width: 100%;
     transform: translateY(-25%);
   }
 
-  /* I probably don't need this */
-  .view-container .slide .info-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-  }
-
-  /* This entire rule is from the video */
-  .view-container .navigation {
-    z-index: 20;
-    position: absolute;
-    display: flex;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  /* This entire rule is from the video */
-  .view-container .navigation .navBtn {
-    background: rgba(255, 255, 255, 0.9);
-    width: 12px;
-    height: 12px;
-    margin: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    position: relative;
-  }
-
-  /* MY STYLES */
-  /* Don't touch these*/
-
+  /* TEXT */
   .title-center {
     position: absolute;
     top: 12px;
@@ -100,17 +46,18 @@ export const Wrapper = styled.div`
     color: rgba(244, 244, 244, 0.45);
   }
 
-  .info-center {
-    position: relative;
+  .info-center h1 {
+    position: absolute;
     font-size: 5rem;
     letter-spacing: 0.7rem;
     font-weight: normal;
-    top: 50%;
+    top: 300px;
     left: 50%;
-    z-index: 100;
+    z-index: 30;
     transform: translate(-50%, -50%);
   }
 
+  /* NAVIGATION */
   .arrow {
     position: absolute;
     z-index: 101;
@@ -141,11 +88,14 @@ export const Wrapper = styled.div`
 
     .view-container img {
       max-height: 100%;
+      transform: translateY(-10%);
     }
 
     .info-center {
-      transform: translate(-50%, -90%);
-      font-size: 6rem;
+      /* transform: translateY(-50%); */
+      /* font-size: 6rem; */
+
+      top: 300px;
     }
 
     h1 {
@@ -181,6 +131,10 @@ export const Wrapper = styled.div`
     .title-center h1 {
       font-size: 1.2rem;
       letter-spacing: 0.2rem;
+    }
+
+    .info-center h1 {
+      font-size: 2rem;
     }
   }
 `;

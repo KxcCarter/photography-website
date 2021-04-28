@@ -8,7 +8,7 @@ const HeroSlider = (props) => {
 
   const imageSlides = IMAGES.map((item, index) => (
     <div
-      className={`slide ${index === currentSlide ? 'active' : 'hidden'}`}
+      className={`slide ${index === currentSlide ? 'active' : ''}`}
       key={index}
     >
       {index === currentSlide && (
@@ -22,16 +22,6 @@ const HeroSlider = (props) => {
     </div>
   ));
 
-  //   const NavButtons = () => {
-  //     const [activeClass, setActiveClass] = useState('');
-  //     return (
-  //       <div
-  //         className={`navBtn ${activeClass}`}
-  //         onClick={() => setActiveClass('active')}
-  //       ></div>
-  //     );
-  //   };
-
   const nextSlide = () => {
     setCurrentSlide(currentSlide === IMAGES.length - 1 ? 0 : currentSlide + 1);
   };
@@ -39,16 +29,14 @@ const HeroSlider = (props) => {
     setCurrentSlide(currentSlide === 0 ? IMAGES.length - 1 : currentSlide - 1);
   };
 
-  //   useEffect(() => {
-  //     const autoSlide = setInterval(() => {
-  //       nextSlide();
-  //     }, 1000);
-  //     return () => {
-  //       clearInterval(autoSlide);
-  //     };
-  //   }, [currentSlide]);
-
-  //   const navButtons = IMAGES.map((item, index) => <NavButtons key={index} />);
+  useEffect(() => {
+    const autoSlider = setTimeout(() => {
+      nextSlide();
+    }, 5000);
+    return () => {
+      clearTimeout(autoSlider);
+    };
+  }, [currentSlide]);
 
   return (
     <Wrapper>
@@ -67,8 +55,6 @@ const HeroSlider = (props) => {
             onClick={nextSlide}
           />
         </div>
-
-        {/* <div className="navigation">{navButtons}</div> */}
       </div>
     </Wrapper>
   );
