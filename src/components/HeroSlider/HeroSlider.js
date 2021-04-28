@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Wrapper } from './HeroSlider.styles';
-import { IMAGES } from '../photoApi/API';
+import { IMAGES } from '../../photoApi/API';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 const HeroSlider = (props) => {

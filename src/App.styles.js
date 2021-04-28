@@ -12,7 +12,6 @@ export const GlobalStyle = createGlobalStyle`
 
         display: flex;
         flex-direction: column;
-        /* align-items: center; */
         justify-content: center;
 
     }
@@ -36,7 +35,7 @@ export const GlobalStyle = createGlobalStyle`
 
     @media (max-width: 1366px) {
         body {
-            max-width: 100vw;
+            max-width: 90vw;
         }
     }
 
