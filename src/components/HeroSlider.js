@@ -20,14 +20,14 @@ const HeroSlider = (props) => {
   return (
     <Wrapper>
       <div className="view-container">
-        <div className="slide"></div>
-        <img className="image" src={photo1} alt="Victor Portrait" />
-        <div class="center">
-          <h1>Style</h1>
-        </div>
-        {/* rename this class \/ */}
-        <div class="topleft">
+        <div class="title-center">
           <h1>H. Raymond Carter Photography</h1>
+        </div>
+        <div className="slide">
+          <img className="image" src={photo1} alt="Victor Portrait" />
+          <div class="center">
+            <h1>Style</h1>
+          </div>
         </div>
       </div>
     </Wrapper>

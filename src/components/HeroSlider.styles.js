@@ -21,15 +21,16 @@ export const Wrapper = styled.div`
     transform: translateY(-25%);
   }
 
-  .topleft {
+  .title-center {
     position: absolute;
     top: 12px;
     left: 0;
     width: 100%;
     font-size: 1rem;
+    z-index: 30;
   }
 
-  .topleft h1 {
+  .title-center h1 {
     margin: auto;
     font-size: 2rem;
     letter-spacing: 1rem;
@@ -67,7 +68,7 @@ export const Wrapper = styled.div`
   }
 
   @media (max-width: 800px) {
-    .topleft h1 {
+    .title-center h1 {
       font-size: 2rem;
       letter-spacing: 0.4rem;
     }
@@ -91,7 +92,7 @@ export const Wrapper = styled.div`
       font-size: 1rem;
     }
 
-    .topleft h1 {
+    .title-center h1 {
       font-size: 1.2rem;
       letter-spacing: 0.2rem;
     }
