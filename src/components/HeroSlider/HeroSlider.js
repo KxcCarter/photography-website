@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Wrapper } from './HeroSlider.styles';
-import { IMAGES } from '../photoApi/API';
+import { IMAGES } from '../../photoApi/API';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 const HeroSlider = (props) => {
@@ -32,18 +32,18 @@ const HeroSlider = (props) => {
   useEffect(() => {
     const autoSlider = setTimeout(() => {
       nextSlide();
-    }, 5000);
+    }, 6000);
     return () => {
       clearTimeout(autoSlider);
     };
-  }, [currentSlide]);
+  }, [currentSlide, nextSlide]);
 
   return (
     <Wrapper>
       <div className="view-container">
-        <div className="title-center">
+        {/* <div className="title-center">
           <h1>H. Raymond Carter Photography</h1>
-        </div>
+        </div> */}
         {imageSlides}
         <div className="nav-arrows">
           <FaArrowAltCircleLeft

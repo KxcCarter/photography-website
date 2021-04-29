@@ -5,9 +5,9 @@ import photo4 from '../images/image4.jpg';
 import photo5 from '../images/image5.jpg';
 
 export const IMAGES = [
+  { img: photo5, altText: 'Sophistication' },
   { img: photo1, altText: 'Style' },
   { img: photo2, altText: 'Class' },
   { img: photo3, altText: 'Elegance' },
   { img: photo4, altText: 'Intensity' },
-  { img: photo5, altText: 'Sophistication' },
 ];

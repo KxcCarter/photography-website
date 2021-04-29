@@ -1,14 +1,14 @@
 import React from 'react';
-import HeroSlider from '../components/HeroSlider/HeroSlider';
+import AboutHero from '../components/About/AboutHero';
 import LandingAbout from '../components/Landing/LandingAbout';
 
-const Landing = (props) => {
+const About = (props) => {
   return (
     <div>
-      <HeroSlider />
+      <AboutHero />
       <LandingAbout />
     </div>
   );
 };
 
-export default Landing;
+export default About;

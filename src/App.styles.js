@@ -12,7 +12,6 @@ export const GlobalStyle = createGlobalStyle`
 
         display: flex;
         flex-direction: column;
-        /* align-items: center; */
         justify-content: center;
 
     }
@@ -34,9 +33,26 @@ export const GlobalStyle = createGlobalStyle`
         line-height: 1.85rem;        
     }
 
+
+    .image-container {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    transform: scale(1.05);
+  }
+
+  .animate {
+    font-size: 3rem;
+    transform: scale(1);
+    transition: all 2s ease-in-out;
+  }
+
+
+
+
     @media (max-width: 1366px) {
         body {
-            max-width: 100vw;
+            max-width: 90vw;
         }
     }
 
