@@ -5,6 +5,7 @@ import HeaderNavMenu from './components/Header/HeaderNavMenu';
 
 import Landing from './pages/Landing';
 import About from './pages/About';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <HeaderNavMenu />
         <Route exact path="/" component={Landing} />
         <Route exact path="/about" component={About} />
+        <Route exact path="/contact" component={Contact} />
 
         <Copyright />
       </Wrapper>

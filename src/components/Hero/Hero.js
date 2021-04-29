@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import profile1 from '../../images/profile1.jpg';
-import { StyleWrapper } from './AboutHero.styles';
+import { StyleWrapper } from './Hero.styles';
 
-const AboutHero = () => {
+const Hero = ({ image, title }) => {
   const [cssRule, setCssRule] = useState('');
 
   useEffect(() => {
@@ -16,13 +15,13 @@ const AboutHero = () => {
   return (
     <StyleWrapper>
       <div className={`image-container ${cssRule}`}>
-        <img src={profile1} alt="omg so moody" />
+        <img src={image} alt="omg so moody" />
         <div className="info-center">
-          <h1 className={`${cssRule}`}>About Me</h1>
+          <h1 className={`${cssRule}`}>{title}</h1>
         </div>
       </div>
     </StyleWrapper>
   );
 };
 
-export default AboutHero;
+export default Hero;
