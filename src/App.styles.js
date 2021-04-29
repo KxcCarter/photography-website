@@ -34,18 +34,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
 
-    .image-container {
-    position: relative;
-    width: 100%;
-    height: 70vh;
-    transform: scale(1.05);
-  }
 
-  .animate {
-    font-size: 3rem;
-    transform: scale(1);
-    transition: all 2s ease-in-out;
-  }
 
 
 

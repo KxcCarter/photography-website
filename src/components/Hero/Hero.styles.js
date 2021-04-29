@@ -7,11 +7,7 @@ export const StyleWrapper = styled.div`
   /* padding-bottom: -20px;
   margin-bottom: -20px; */
 
-  /* These rules were moved to App.list-style-position.js 
-  so that they can be applied globaly for cool transition effects
-  simply by adding the .animate class to a div. Should work for all hero images.
-  */
-  /* .image-container {
+  .image-container {
     position: relative;
     width: 100%;
     height: 70vh;
@@ -22,7 +18,7 @@ export const StyleWrapper = styled.div`
     font-size: 3rem;
     transform: scale(1);
     transition: all 2s ease-in-out;
-  } */
+  }
 
   img {
     max-width: 100%;
