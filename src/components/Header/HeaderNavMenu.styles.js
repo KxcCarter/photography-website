@@ -36,9 +36,14 @@ export const Wrapper = styled.div`
     margin-bottom: 0;
     /* margin: auto; */
     font-size: 2rem;
-    letter-spacing: 1rem;
+    letter-spacing: 0.5rem;
     color: rgba(244, 244, 244, 0.5);
   }
+
+  /* .animate {
+    letter-spacing: 1rem;
+    transition: letter-spacing 2s ease-in-out;
+  } */
 
   @media (max-width: 800px) {
     h1 {
