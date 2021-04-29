@@ -13,11 +13,9 @@ const HeaderNavMenu = () => {
   return (
     <Wrapper>
       <div className="outer-wrapper">
-        {/* <div className="title-center">
-        </div> */}
         <h1>H. Raymond Carter Photography</h1>
         {PAGES.map((item, index) => (
-          <h4>
+          <h4 key={index}>
             <Link to={item.path}>{item.name}</Link>
           </h4>
         ))}

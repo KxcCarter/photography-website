@@ -1,11 +1,11 @@
 import React from 'react';
-import HeroAbout from '../components/About/HeroAbout';
+import AboutHero from '../components/About/AboutHero';
 import LandingAbout from '../components/Landing/LandingAbout';
 
 const About = (props) => {
   return (
     <div>
-      <HeroAbout />
+      <AboutHero />
       <LandingAbout />
     </div>
   );
