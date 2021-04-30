@@ -9,6 +9,7 @@ const Contact = () => {
   return (
     <>
       <Hero image={contact3} title="Contact Me" />
+      {/* Something about ContactForm prevents the Hero animation on both About and Contact */}
       <ContactForm />
     </>
   );

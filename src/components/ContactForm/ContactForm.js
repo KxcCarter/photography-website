@@ -1,5 +1,5 @@
 import React from 'react';
-import { Formik, Field, Form, useField, FieldArray } from 'formik';
+import { Formik, Field, Form, useField } from 'formik';
 import * as yup from 'yup';
 import {
   Button,
@@ -68,7 +68,8 @@ const ContactForm = () => {
           name: '',
           phonenumber: '',
           email: '',
-          referal: ['Google search', 'Instagram', 'From a friend', 'Other'],
+          referral: '',
+
           message: '',
           shootType: '',
           otherShootExplaination: '',
@@ -127,11 +128,12 @@ const ContactForm = () => {
             </div>
 
             <div>
-              <Field name="referal" type="select" as={Select}>
-                <MenuItem value="Google">Google</MenuItem>
+              {/* <Field name="referral" type="select" as={Select}>
+                <MenuItem value="Google">Google </MenuItem>
                 <MenuItem value="Instagram">Instagram</MenuItem>
                 <MenuItem value="From a friend">From a friend</MenuItem>
-              </Field>
+                <MenuItem value="Other">Other</MenuItem>
+              </Field> */}
             </div>
 
             <div>
@@ -154,7 +156,7 @@ const ContactForm = () => {
                 submit
               </Button>
             </div>
-            <prev>{JSON.stringify(values, null, 2)}</prev>
+            {/* <prev>{JSON.stringify(values, null, 2)}</prev> */}
           </Form>
         )}
       </Formik>
