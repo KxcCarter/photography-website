@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyleWrapper = styled.div`
-  background: #819d74;
+  /* background: #819d74; */
   width: 80%;
   padding: 20px;
   margin: 50px 0;

@@ -10,6 +10,7 @@ import {
   Radio,
 } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
+
 //
 import { StyleWrapper } from './ContactForm.styles';
 //
@@ -33,10 +34,11 @@ const CustomTextField = ({ placeholder, ...props }) => {
     <TextField
       {...field}
       {...props}
-      placeholder={placeholder}
+      //   placeholder={placeholder}
       helperText={errorText}
-      variant="outlined"
+      variant="filled"
       error={!!errorText}
+      label={placeholder}
     />
   );
 };
@@ -44,10 +46,10 @@ const CustomTextField = ({ placeholder, ...props }) => {
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
 const validationSchema = yup.object({
-  name: yup.string().required('Please... I need this.'),
+  name: yup.string().required(),
   phonenumber: yup.string().matches(phoneRegExp, 'Phone number is not valid'),
-  email: yup.string().email(),
-  message: yup.string().required('Just... just give me this.'),
+  email: yup.string().email().required(),
+  message: yup.string().required(),
 });
 
 const OPTIONS = [
@@ -68,7 +70,6 @@ const ContactForm = () => {
           phonenumber: '',
           email: '',
           referral: '',
-
           message: '',
           shootType: '',
           otherShootExplaination: '',
@@ -91,6 +92,8 @@ const ContactForm = () => {
 
             <div className="field">
               <CustomTextField placeholder="Phone" name="phonenumber" />
+            </div>
+            <div className="field">
               <CustomTextField placeholder="Email" name="email" />
             </div>
 
@@ -161,7 +164,6 @@ const ContactForm = () => {
                 submit
               </Button>
             </div>
-            {/* <prev>{JSON.stringify(values, null, 2)}</prev> */}
           </Form>
         )}
       </Formik>
