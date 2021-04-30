@@ -2,19 +2,6 @@ import React from 'react';
 import { StyledWrapper } from './ContactPageInfo.styles';
 import { CgArrowLongRight } from 'react-icons/cg';
 
-// const tempStyles = {
-//   display: 'flex',
-//   justifyContent: 'space-around',
-//   // background: '#819d74',
-//   width: '75vw',
-//   textAlign: 'center',
-// };
-
-// const arrowColor = {
-//   color: '#928763',
-//   fontSize: '1.5rem',
-// };
-
 const ContactPageInfo = () => {
   return (
     <StyledWrapper>

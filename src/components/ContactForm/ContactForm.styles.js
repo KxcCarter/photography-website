@@ -26,7 +26,12 @@ export const StyleWrapper = styled.div`
     padding-top: 1.8rem;
   }
 
-  @media (max-width: 400px) {
+  .radio-field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 500px) {
     width: 100%;
     padding: 10px;
   }

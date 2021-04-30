@@ -107,9 +107,11 @@ const ContactForm = () => {
               />
             </div>
 
-            <div className="field">
+            <div className="field radio-field">
               <FormControl>
-                <FormLabel>What Type of Shoot do You Need?</FormLabel>
+                <FormLabel color="secondary">
+                  What Type of Shoot do You Need?
+                </FormLabel>
                 {OPTIONS.map((item, index) => (
                   <RadioChoicesWithLabels
                     key={index}
@@ -122,12 +124,15 @@ const ContactForm = () => {
               </FormControl>
 
               {values.shootType === 'Other' ? (
-                <Field
-                  placeholder="Please Explain"
-                  name="otherShootExplaination"
-                  type="input"
-                  as={TextField}
-                />
+                <div>
+                  <CustomTextField
+                    placeholder="Please Explain"
+                    name="otherShootExplaination"
+                    type="input"
+                    fullWidth
+                    as={TextField}
+                  />
+                </div>
               ) : null}
             </div>
 
