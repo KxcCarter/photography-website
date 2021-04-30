@@ -13,6 +13,18 @@ export const StyleWrapper = styled.div`
     margin: 40px 0;
   }
 
+  select {
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 20px 0;
+    background-color: whitesmoke;
+  }
+
+  .field {
+    padding-top: 20px;
+  }
+
   @media (max-width: 400px) {
     width: 100%;
     padding: 10px;

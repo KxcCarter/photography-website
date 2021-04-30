@@ -8,12 +8,11 @@ import {
   FormControlLabel,
   FormLabel,
   Radio,
-  Select,
-  MenuItem,
 } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
-
+//
 import { StyleWrapper } from './ContactForm.styles';
+//
 
 const RadioChoicesWithLabels = ({ label, ...props }) => {
   const [field] = useField(props);
@@ -90,7 +89,7 @@ const ContactForm = () => {
               <CustomTextField placeholder="Name" name="name" fullWidth />
             </div>
 
-            <div>
+            <div className="field">
               <CustomTextField placeholder="Phone" name="phonenumber" />
               <CustomTextField placeholder="Email" name="email" />
             </div>
@@ -103,7 +102,7 @@ const ContactForm = () => {
               />
             </div>
 
-            <div>
+            <div className="field">
               <FormControl>
                 <FormLabel>Type of Shoot</FormLabel>
                 {OPTIONS.map((item, index) => (
@@ -127,16 +126,22 @@ const ContactForm = () => {
               ) : null}
             </div>
 
-            <div>
-              {/* <Field name="referral" type="select" as={Select}>
-                <MenuItem value="Google">Google </MenuItem>
-                <MenuItem value="Instagram">Instagram</MenuItem>
-                <MenuItem value="From a friend">From a friend</MenuItem>
-                <MenuItem value="Other">Other</MenuItem>
-              </Field> */}
+            <div className="field">
+              <FormControl>
+                <FormLabel>How did you hear about me?</FormLabel>
+                <Field name="referral" type="input" as="select">
+                  <option value="" disabled>
+                    Select option
+                  </option>
+                  <option value="Google">Google </option>
+                  <option value="Instagram">Instagram</option>
+                  <option value="From a friend">From a friend</option>
+                  <option value="Other">Other</option>
+                </Field>
+              </FormControl>
             </div>
 
-            <div>
+            <div className="field">
               <CustomTextField
                 placeholder="Write a message"
                 name="message"
