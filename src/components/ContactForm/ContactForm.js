@@ -39,6 +39,7 @@ const CustomTextField = ({ placeholder, ...props }) => {
       variant="filled"
       error={!!errorText}
       label={placeholder}
+      size="small"
     />
   );
 };
@@ -78,6 +79,7 @@ const ContactForm = () => {
         validationSchema={validationSchema}
         onSubmit={(data, { setSubmitting, resetForm }) => {
           setSubmitting(true);
+          // TODO: Save and submit data
           // make async call to save data somewhere on cloud.
           console.log(data);
           setSubmitting(false);
@@ -107,7 +109,7 @@ const ContactForm = () => {
 
             <div className="field">
               <FormControl>
-                <FormLabel>Type of Shoot</FormLabel>
+                <FormLabel>What Type of Shoot do You Need?</FormLabel>
                 {OPTIONS.map((item, index) => (
                   <RadioChoicesWithLabels
                     key={index}
@@ -150,7 +152,7 @@ const ContactForm = () => {
                 name="message"
                 fullWidth
                 multiline
-                rows={4}
+                rows={6}
               />
             </div>
 

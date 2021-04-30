@@ -4,12 +4,13 @@ import contact3 from '../images/contact3.jpg';
 
 // Components
 import ContactForm from '../components/ContactForm/ContactForm';
+import ContactPageInfo from '../components/ContactPageInfo/ContactPageInfo';
 
 const Contact = () => {
   return (
     <>
       <Hero image={contact3} title="Contact Me" />
-      {/* Something about ContactForm prevents the Hero animation on both About and Contact */}
+      <ContactPageInfo />
       <ContactForm />
     </>
   );
