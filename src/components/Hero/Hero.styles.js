@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const StyleWrapper = styled.div`
   max-width: 100vw;
+  max-height: 1200px;
   text-align: center;
   overflow: hidden;
   /* padding-bottom: -20px;
@@ -11,6 +12,7 @@ export const StyleWrapper = styled.div`
     position: relative;
     width: 100%;
     height: 70vh;
+    max-height: 1200px;
     transform: scale(1.05);
   }
 
@@ -47,6 +49,10 @@ export const StyleWrapper = styled.div`
 
     .image-container {
       height: 50vh;
+    }
+
+    img {
+      transform: translateY(-5%);
     }
 
     h1 {

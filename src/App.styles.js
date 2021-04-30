@@ -20,17 +20,31 @@ export const GlobalStyle = createGlobalStyle`
         width: 15%;
     }
 
-    h1 {
+    h1, h2, h3 {
         user-select: none;
         letter-spacing: 0.3rem;
+        color: rgba(244, 244, 244, 0.95);
+    }
+
+    h1 {
         font-size: 3.75rem;
         color: rgba(244, 244, 244, 0.75);
+    }
+
+    h2 {
+        font-size: 2.75rem;
+        font-weight: 100;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+        font-weight: 100;
     }
 
     p {
         font-size: 0.9rem;
         font-weight: lighter;
-        line-height: 1.85rem;        
+        line-height: 1.85rem;
     }
 
 
