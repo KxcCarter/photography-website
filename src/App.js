@@ -14,6 +14,9 @@ const theme = createMuiTheme({
   palette: {
     type: 'dark',
   },
+  typography: {
+    fontFamily: ['Cormorant', 'Times New Roman', 'serif'].join(','),
+  },
 });
 
 function App() {

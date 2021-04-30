@@ -24,6 +24,10 @@ export const StyledWrapper = styled.div`
 
   .feature {
     pointer-events: auto;
+    &:hover {
+      transform: scale(1.05);
+      transition: transform 0.5s ease-in-out;
+    }
   }
 
   .feature-box:hover > div:not(:hover) {
