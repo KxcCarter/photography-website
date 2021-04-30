@@ -31,7 +31,7 @@ const ContactPageInfo = () => {
         </div>
       </div>
       <div className="description">
-        <h2>Let's Capture some Memories</h2>
+        <h3>Let's Capture some Memories</h3>
         <p>Based in Kansas City, Missouri</p>
         <hr />
         <p>
