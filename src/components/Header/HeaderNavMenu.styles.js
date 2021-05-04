@@ -13,9 +13,10 @@ export const Wrapper = styled.div`
     text-transform: capitalize;
     user-select: none;
     cursor: pointer;
+    transition: transform, letter-spacing 0.3s ease-in-out;
     &:hover {
       transform: scale(1.1);
-      transition: transform 0.3s ease-in-out;
+      letter-spacing: 0.05rem;
     }
   }
 
@@ -38,16 +39,10 @@ export const Wrapper = styled.div`
     font-size: 1rem;
     z-index: 30;
     margin-bottom: 0;
-    /* margin: auto; */
     font-size: 2rem;
     letter-spacing: 0.5rem;
     color: rgba(244, 244, 244, 0.5);
   }
-
-  /* .animate {
-    letter-spacing: 1rem;
-    transition: letter-spacing 2s ease-in-out;
-  } */
 
   @media (max-width: 800px) {
     h1 {

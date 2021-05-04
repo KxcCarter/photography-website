@@ -14,18 +14,8 @@ export const StyleWrapper = styled.div`
     height: 70vh;
     max-height: 1200px;
     transform: scale(1.05);
-  }
 
-  .animate {
-    /* font-size: 4.5rem; */
-    transform: scale(1);
     transition: transform 2s ease-in-out;
-  }
-
-  .animate h1 {
-    /* font-size: 4.5rem; */
-    font-weight: bolder;
-    transition: all 2s ease-in-out;
   }
 
   img {
@@ -47,6 +37,18 @@ export const StyleWrapper = styled.div`
 
     /* transform: translate(-50%, -50%); */
     /* transform: scale(1); */
+  }
+
+  .animate {
+    /* font-size: 4.5rem; */
+    transform: scale(1);
+  }
+
+  .animate h1 {
+    font-size: 4.4rem;
+    letter-spacing: 1.75rem;
+    /* font-weight: bolder; */
+    transition: all 2s ease-in-out;
   }
 
   @media (min-width: 1100px) {

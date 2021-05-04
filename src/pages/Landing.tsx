@@ -2,7 +2,7 @@ import React from 'react';
 import HeroSlider from '../components/HeroSlider/HeroSlider';
 import LandingAbout from '../components/Landing/LandingAbout';
 
-const Landing = (props) => {
+const Landing: React.FC = () => {
   return (
     <div>
       <HeroSlider />

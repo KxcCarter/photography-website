@@ -1,12 +1,12 @@
 import React from 'react';
-import Hero from '../components/Hero/Hero';
 import contact3 from '../images/contact3.jpg';
+import Hero from '../components/Hero/Hero';
 
 // Components
 import ContactForm from '../components/ContactForm/ContactForm';
 import ContactPageInfo from '../components/ContactPageInfo/ContactPageInfo';
 
-const Contact = () => {
+const Contact: React.FC = () => {
   return (
     <>
       <Hero image={contact3} title="Contact Me" />

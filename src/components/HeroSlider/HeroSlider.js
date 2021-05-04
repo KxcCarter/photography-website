@@ -41,9 +41,6 @@ const HeroSlider = (props) => {
   return (
     <Wrapper>
       <div className="view-container">
-        {/* <div className="title-center">
-          <h1>H. Raymond Carter Photography</h1>
-        </div> */}
         {imageSlides}
         <div className="nav-arrows">
           <FaArrowAltCircleLeft

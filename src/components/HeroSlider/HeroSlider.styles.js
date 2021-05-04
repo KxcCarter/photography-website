@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
   text-align: center;
   overflow: hidden;
   padding-bottom: -20px;
+
   .view-container {
     position: relative;
     width: 100%;
@@ -13,13 +14,15 @@ export const Wrapper = styled.div`
   .slide {
     opacity: 0;
     transform: scale(1.25);
-    transition-duration: 2s ease-in-out;
+    /* transition-duration: 2s ease-in-out; */
+    transition: all 2s ease-in-out;
   }
   .active {
     opacity: 1;
     transform: scale(1);
+    /*
     transition-duration: 2s;
-    transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out; */
   }
   .view-container img {
     max-width: 100%;
@@ -35,7 +38,14 @@ export const Wrapper = styled.div`
     left: 50%;
     z-index: 30;
     transform: translate(-50%, -50%);
+    /* transition: font-size, letter-spacing 2s ease-in-out; */
   }
+
+  /* .active h1 {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+  } */
+
   /* NAVIGATION */
   .arrow {
     position: absolute;
