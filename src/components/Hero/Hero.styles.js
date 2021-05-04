@@ -17,8 +17,14 @@ export const StyleWrapper = styled.div`
   }
 
   .animate {
-    font-size: 3rem;
+    /* font-size: 4.5rem; */
     transform: scale(1);
+    transition: transform 2s ease-in-out;
+  }
+
+  .animate h1 {
+    /* font-size: 4.5rem; */
+    font-weight: bolder;
     transition: all 2s ease-in-out;
   }
 
@@ -36,7 +42,11 @@ export const StyleWrapper = styled.div`
     top: 300px;
     left: 50%;
     z-index: 30;
-    transform: translate(-50%, -50%);
+
+    transform: translateX(-50%);
+
+    /* transform: translate(-50%, -50%); */
+    /* transform: scale(1); */
   }
 
   @media (min-width: 1100px) {

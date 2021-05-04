@@ -2,13 +2,13 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { GlobalStyle, Wrapper } from './App.styles';
 import Copyright from './components/Copyright';
 import HeaderNavMenu from './components/Header/HeaderNavMenu';
-
+//
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+// Components
 import Landing from './pages/Landing';
 import About from './pages/About';
 import Contact from './pages/Contact';
-
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import Portfolio from './pages/Portfolio';
+import Portfolio from './pages/Portfolio.tsx';
 
 // This theme is really only neccesary for the form on the Contact page.
 const theme = createMuiTheme({
