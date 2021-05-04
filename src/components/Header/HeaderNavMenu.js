@@ -25,7 +25,7 @@ const HeaderNavMenu = () => {
   return (
     <Wrapper>
       <div className="outer-wrapper">
-        <h1 className={cssRule}>H. Raymond Carter Photography</h1>
+        <h1 className={cssRule}>Hursh Photos</h1>
         {PAGES.map((item, index) => (
           <h4 key={index}>
             <Link to={item.path}>{item.name}</Link>

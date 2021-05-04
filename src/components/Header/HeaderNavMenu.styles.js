@@ -13,6 +13,10 @@ export const Wrapper = styled.div`
     text-transform: capitalize;
     user-select: none;
     cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease-in-out;
+    }
   }
 
   .outer-wrapper {

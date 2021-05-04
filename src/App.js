@@ -8,6 +8,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import Portfolio from './pages/Portfolio';
 
 // This theme is really only neccesary for the form on the Contact page.
 const theme = createMuiTheme({
@@ -29,6 +30,7 @@ function App() {
           <Route exact path="/" component={Landing} />
           <Route exact path="/about" component={About} />
           <Route exact path="/contact" component={Contact} />
+          <Route exact path="/portfolio" component={Portfolio} />
 
           <Copyright />
         </Wrapper>
