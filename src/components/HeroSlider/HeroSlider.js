@@ -3,7 +3,7 @@ import { Wrapper } from './HeroSlider.styles';
 import { IMAGES } from '../../photoApi/API';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
-const HeroSlider = (props) => {
+const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const imageSlides = IMAGES.map((item, index) => (

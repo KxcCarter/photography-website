@@ -5,46 +5,42 @@ export const Wrapper = styled.div`
   text-align: center;
   overflow: hidden;
   padding-bottom: -20px;
+  position: relative;
+  height: 750px;
 
-  .view-container {
-    position: relative;
-    width: 100%;
-    height: 700px;
-  }
   .slide {
     opacity: 0;
     transform: scale(1.25);
-    /* transition-duration: 2s ease-in-out; */
+
     transition: all 2s ease-in-out;
   }
-  .active {
-    opacity: 1;
-    transform: scale(1);
-    /*
-    transition-duration: 2s;
-    transition-timing-function: ease-in-out; */
-  }
-  .view-container img {
+
+  img {
     max-width: 100%;
     transform: translateY(-25%);
   }
+
   /* TEXT */
   .info-center h1 {
     position: absolute;
-    font-size: 5rem;
-    letter-spacing: 0.7rem;
+    /* font-size: 5rem;
+    letter-spacing: 0.7rem; */
     font-weight: normal;
     top: 450px;
     left: 50%;
     z-index: 30;
     transform: translate(-50%, -50%);
-    /* transition: font-size, letter-spacing 2s ease-in-out; */
+    /* transition: letter-spacing 2s ease-in-out; */
   }
 
-  /* .active h1 {
-    font-size: 2rem;
-    letter-spacing: 0.2rem;
-  } */
+  .active {
+    opacity: 1;
+    transform: scale(1);
+    /* letter-spacing: 0.2rem;
+    font-size: 3rem; */
+    /* transition-duration: 2s;
+    transition-timing-function: ease-in-out; */
+  }
 
   /* NAVIGATION */
   .arrow {
@@ -90,6 +86,7 @@ export const Wrapper = styled.div`
   }
   @media (max-width: 600px) {
     aspect-ratio: 3/4;
+    max-height: 70vh;
     .view-container img {
       max-height: 100%;
       transform: translateY(0);

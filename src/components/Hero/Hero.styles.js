@@ -5,8 +5,6 @@ export const StyleWrapper = styled.div`
   max-height: 1200px;
   text-align: center;
   overflow: hidden;
-  /* padding-bottom: -20px;
-  margin-bottom: -20px; */
 
   .image-container {
     position: relative;
@@ -26,29 +24,23 @@ export const StyleWrapper = styled.div`
   .info-center h1 {
     position: absolute;
     width: 100%;
-    /* font-size: 7rem; */
     letter-spacing: 0.7rem;
     font-weight: normal;
     top: 300px;
     left: 50%;
     z-index: 30;
-
     transform: translateX(-50%);
 
-    /* transform: translate(-50%, -50%); */
-    /* transform: scale(1); */
+    transition: all 2s ease-in-out;
   }
 
   .animate {
-    /* font-size: 4.5rem; */
     transform: scale(1);
   }
 
   .animate h1 {
     font-size: 4.4rem;
     letter-spacing: 1.75rem;
-    /* font-weight: bolder; */
-    transition: all 2s ease-in-out;
   }
 
   @media (min-width: 1100px) {
@@ -68,11 +60,12 @@ export const StyleWrapper = styled.div`
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 1.7rem;
     }
 
-    .animate {
-      font-size: 1.75rem;
+    .animate h1 {
+      font-size: 2rem;
+      letter-spacing: 1rem;
     }
   }
 `;
