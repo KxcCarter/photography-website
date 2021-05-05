@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Cormorant', serif;
         padding: 0;
         margin: auto;
-        max-width: 80vw;
+        /* max-width: 80vw; */
 
         display: flex;
         flex-direction: column;

@@ -29,14 +29,16 @@ const HeroSlider = () => {
     setCurrentSlide(currentSlide === 0 ? IMAGES.length - 1 : currentSlide - 1);
   };
 
-  useEffect(() => {
-    const autoSlider = setTimeout(() => {
-      nextSlide();
-    }, 6000);
-    return () => {
-      clearTimeout(autoSlider);
-    };
-  }, [currentSlide, nextSlide]);
+  // NOTE! Uncomment the code below to turn on slider.
+
+  // useEffect(() => {
+  //   const autoSlider = setTimeout(() => {
+  //     nextSlide();
+  //   }, 6000);
+  //   return () => {
+  //     clearTimeout(autoSlider);
+  //   };
+  // }, [currentSlide, nextSlide]);
 
   return (
     <Wrapper>

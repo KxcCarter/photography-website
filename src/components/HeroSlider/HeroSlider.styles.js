@@ -6,7 +6,8 @@ export const Wrapper = styled.div`
   overflow: hidden;
   padding-bottom: -20px;
   position: relative;
-  height: 750px;
+  height: 80vh;
+  max-height: 1400px;
 
   .slide {
     opacity: 0;
@@ -23,8 +24,8 @@ export const Wrapper = styled.div`
   /* TEXT */
   .info-center h1 {
     position: absolute;
-    /* font-size: 5rem;
-    letter-spacing: 0.7rem; */
+    font-size: 5rem;
+    letter-spacing: 0.7rem;
     font-weight: normal;
     top: 450px;
     left: 50%;
@@ -66,13 +67,13 @@ export const Wrapper = styled.div`
   /* MEDIA QUERIES */
   @media (max-width: 1024px) {
     aspect-ratio: 4/4;
+    width: 100vw;
+
     .view-container img {
       max-height: 100%;
       transform: translateY(-10%);
     }
     .info-center {
-      /* transform: translateY(-50%); */
-      /* font-size: 6rem; */
       top: 300px;
     }
     h1 {
@@ -85,16 +86,20 @@ export const Wrapper = styled.div`
     }
   }
   @media (max-width: 600px) {
-    aspect-ratio: 3/4;
+    /* aspect-ratio: 9/16; */
     max-height: 70vh;
-    .view-container img {
+
+    .view-container {
       max-height: 100%;
       transform: translateY(0);
+
+      overflow: hidden;
     }
     /* Not sure if I need a rule for .image and img */
     .image {
-      width: 100%;
-      height: 100%;
+      aspect-ratio: 3/4;
+      /* width: 100%;
+      height: 100%; */
     }
     h1 {
       font-size: 1rem;
