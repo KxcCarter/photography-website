@@ -12,13 +12,12 @@ export const Wrapper = styled.div`
   .slide {
     opacity: 0;
     transform: scale(1.25);
-
     transition: all 2s ease-in-out;
   }
 
   img {
     max-width: 100%;
-    transform: translateY(-25%);
+    transform: translateY(-15%);
   }
 
   /* TEXT */
