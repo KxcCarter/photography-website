@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { AuthProvider } from './contexts/AuthContext';
+// Styling
 import { GlobalStyle, Wrapper } from './App.styles';
-import Copyright from './components/Copyright';
-import HeaderNavMenu from './components/Header/HeaderNavMenu';
-//
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 // Components
+import Copyright from './components/Copyright';
+import HeaderNavMenu from './components/Header/HeaderNavMenu';
 import Landing from './pages/Landing';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -25,22 +26,24 @@ const theme = createMuiTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Router>
-        <GlobalStyle />
-        <Wrapper>
-          <HeaderNavMenu />
-          <Route exact path="/" component={Landing} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/contact" component={Contact} />
-          <Route exact path="/portfolio" component={Portfolio} />
+      <AuthProvider>
+        <Router>
+          <GlobalStyle />
+          <Wrapper>
+            <HeaderNavMenu />
+            <Route exact path="/" component={Landing} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/contact" component={Contact} />
+            <Route exact path="/portfolio" component={Portfolio} />
 
-          {/* This route needs to be protected */}
-          <Route exact path="/manage" component={PhotoManager} />
-          {/* <Route exact path="/blog" component={Blog} /> */}
+            {/* This route needs to be protected */}
+            <Route exact path="/manage" component={PhotoManager} />
+            {/* <Route exact path="/blog" component={Blog} /> */}
 
-          <Copyright />
-        </Wrapper>
-      </Router>
+            <Copyright />
+          </Wrapper>
+        </Router>
+      </AuthProvider>
     </ThemeProvider>
   );
 }
