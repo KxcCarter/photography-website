@@ -5,6 +5,7 @@ import { useAuth } from '../../contexts/AuthContext';
 //
 // Components
 import Login from './Login';
+import { Button } from '@material-ui/core';
 
 const LoginOrSignup = () => {
   const emailRef = useRef();
@@ -44,7 +45,7 @@ const LoginOrSignup = () => {
     return (
       <div>
         <h2>Create Account</h2>
-        {error && <h3 style={{ color: 'red' }}>WOW YOU SCREWED UP</h3>}
+        {error && <h3 style={{ color: 'red' }}>{JSON.stringify(error)}</h3>}
 
         <form onSubmit={handleSignupSubmit}>
           <label htmlFor="email">Email</label>
@@ -53,9 +54,10 @@ const LoginOrSignup = () => {
           <input id="password" type="password" ref={passwordRef} />
           <label htmlFor="confirm">Confirm password</label>
           <input id="confirm" type="password" ref={passwordConfirmRef} />
-          <button disabled={loading} type="submit">
+
+          <Button disabled={loading} type="submit" variant="contained">
             Create
-          </button>
+          </Button>
         </form>
       </div>
     );
@@ -65,8 +67,7 @@ const LoginOrSignup = () => {
     return (
       <div>
         <h2>Sign Out</h2>
-
-        <button onClick={handleLogout}>Log Out Dawg</button>
+        <Button onClick={handleLogout}>Sign Out</Button>
       </div>
     );
   };
@@ -74,26 +75,6 @@ const LoginOrSignup = () => {
   return (
     <StyleWrapper>
       <div>{currentUser ? <Signout /> : <Login />}</div>
-
-      {/* <div>
-        <h1>Sign Up</h1>
-        {error && <h3 style={{ color: 'red' }}>WOW YOU SCREWED UP</h3>}
-
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="email">we be emailin</label>
-          <input id="email" type="email" ref={emailRef} />
-          <label htmlFor="password">Passowrd</label>
-          <input id="password" type="password" ref={passwordRef} />
-          <label htmlFor="confirm">Confrm pssword</label>
-          <input id="confirm" type="password" ref={passwordConfirmRef} />
-          <button disabled={loading} type="submit">
-            Sign up
-          </button>
-        </form>
-        <div>
-          <p>Already have an account?</p>
-        </div>
-      </div> */}
     </StyleWrapper>
   );
 };

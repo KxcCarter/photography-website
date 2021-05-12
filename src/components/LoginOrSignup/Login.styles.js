@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const StyleWrapper = styled.div`
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 20px 0;
 
   max-width: 400px;
   display: flex;
