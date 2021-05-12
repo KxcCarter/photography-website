@@ -13,7 +13,7 @@ interface FakeData {
 }
 
 const Gallery: React.FC<{}> = () => {
-  const [images, setImages] = useState([]);
+  const [images, setImages] = useState([] as FakeData[]);
   const getPhotos = async () => {
     try {
       const {
@@ -21,7 +21,8 @@ const Gallery: React.FC<{}> = () => {
       } = await tempPhotos.get<FakeResponse>('/');
       setImages(data);
     } catch (error) {
-      throw new Error('Oh noooo ugh');
+      // throw new Error('Oh noooo ugh');
+      console.log(error);
     }
   };
 
