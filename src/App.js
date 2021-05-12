@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ProtectedRoute from './ProtectedRoute';
 import { AuthProvider } from './contexts/AuthContext';
 // Styling
 import { GlobalStyle, Wrapper } from './App.styles';
@@ -39,7 +40,11 @@ function App() {
               <Route exact path="/portfolio" component={Portfolio} />
 
               {/* This route needs to be protected */}
-              <Route exact path="/manage" component={PhotoManager} />
+
+              <ProtectedRoute path="/manage">
+                <PhotoManager />
+              </ProtectedRoute>
+              {/* <Route exact path="/manage" component={PhotoManager} /> */}
               <Route exact path="/login" component={LoginOrSignup} />
               {/* <Route exact path="/blog" component={Blog} /> */}
             </Switch>

@@ -2,6 +2,10 @@ import React, { useRef, useState } from 'react';
 import { StyleWrapper } from './Login.styles';
 import { useAuth } from '../../contexts/AuthContext';
 
+//
+// Components
+import Login from './Login';
+
 const LoginOrSignup = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -39,7 +43,7 @@ const LoginOrSignup = () => {
   const Signup = () => {
     return (
       <div>
-        <h1>Sign Up</h1>
+        <h2>Create Account</h2>
         {error && <h3 style={{ color: 'red' }}>WOW YOU SCREWED UP</h3>}
 
         <form onSubmit={handleSignupSubmit}>
@@ -50,18 +54,17 @@ const LoginOrSignup = () => {
           <label htmlFor="confirm">Confirm password</label>
           <input id="confirm" type="password" ref={passwordConfirmRef} />
           <button disabled={loading} type="submit">
-            Sign up
+            Create
           </button>
         </form>
       </div>
     );
   };
 
-  const Login = () => {
+  const Signout = () => {
     return (
       <div>
-        <h1>Login (out, actually... heh heh heh)</h1>
-        {error && <h3 style={{ color: 'red' }}>WOW YOU SCREWED UP</h3>}
+        <h2>Sign Out</h2>
 
         <button onClick={handleLogout}>Log Out Dawg</button>
       </div>
@@ -70,11 +73,7 @@ const LoginOrSignup = () => {
 
   return (
     <StyleWrapper>
-      <div>
-        <p>daaaawg?</p>
-
-        {currentUser ? <Login /> : <Signup />}
-      </div>
+      <div>{currentUser ? <Signout /> : <Login />}</div>
 
       {/* <div>
         <h1>Sign Up</h1>

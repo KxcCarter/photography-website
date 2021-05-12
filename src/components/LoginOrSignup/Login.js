@@ -41,11 +41,6 @@ const LoginLogout = () => {
             </button>
           </form>
         </div>
-
-        <div className="logout">
-          <h2>Log Out</h2>
-          <button>Log Out</button>
-        </div>
       </div>
     </StyleWrapper>
   );
