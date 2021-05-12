@@ -8,10 +8,12 @@ export const StyleWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
   input {
     display: block;
     margin: 0.5rem 0;
+    margin: auto;
   }
 
   button {
