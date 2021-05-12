@@ -5,17 +5,12 @@ import { useHistory } from 'react-router-dom';
 //
 // MUI
 //
-import {
-  Button,
-  TextField,
-  FormControl,
-  FormControlLabel,
-} from '@material-ui/core';
+import { Button, TextField, FormControl } from '@material-ui/core';
 
-const LoginLogout = () => {
+const LoginLogout = ({ handleClose }) => {
   const emailRef = useRef();
   const passwordRef = useRef();
-  const { login, currentUser } = useAuth();
+  const { login } = useAuth();
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const history = useHistory();
@@ -27,12 +22,13 @@ const LoginLogout = () => {
       setError('');
       setLoading(true);
       await login(emailRef.current.value, passwordRef.current.value);
+
+      handleClose();
+      history.push('/manage');
     } catch (error) {
       setError('Failed to login');
-      console.log(error);
     }
     setLoading(false);
-    history.push('/manage');
   };
 
   useEffect(() => {
@@ -46,31 +42,32 @@ const LoginLogout = () => {
     <StyleWrapper>
       <div>
         <div className="login">
-          <h2>Log In</h2>
-          {error && <h3 style={{ color: 'red' }}>WOW YOU SCREWED UP</h3>}
+          <h3>Log In to Admin Mode</h3>
+          {error && <p style={{ color: 'red' }}>{error}. Please try again</p>}
           <form onSubmit={handleLoginSubmit}>
-            {/* <TextField
-              variant="filled"
-              placeholder="Email"
-              type="email"
-              ref={emailRef}
-            />
+            <FormControl>
+              <TextField
+                className="field"
+                variant="filled"
+                placeholder="Email"
+                type="email"
+                size="small"
+                inputRef={emailRef}
+              />
 
-            <TextField
-              variant="filled"
-              placeholder="Password"
-              type="password"
-              ref={passwordRef}
-            /> */}
+              <TextField
+                className="field"
+                variant="filled"
+                placeholder="Password"
+                type="password"
+                size="small"
+                inputRef={passwordRef}
+              />
 
-            <label htmlFor="email">Email</label>
-            <input id="email" type="email" ref={emailRef} />
-            <label htmlFor="password">Password</label>
-            <input id="password" type="password" ref={passwordRef} />
-
-            <Button disabled={loading} type="submit" variant="outlined">
-              Log In
-            </Button>
+              <Button disabled={loading} type="submit" variant="contained">
+                Log In
+              </Button>
+            </FormControl>
           </form>
         </div>
       </div>

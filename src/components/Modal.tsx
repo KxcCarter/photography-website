@@ -59,7 +59,7 @@ export default function ModalWrapper({ children }: MyProps) {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            <LoginOrSignup />
+            <LoginOrSignup handleClose={handleClose} />
           </div>
         </Fade>
       </Modal>

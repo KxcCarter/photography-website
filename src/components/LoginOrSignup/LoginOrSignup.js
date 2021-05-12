@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import { StyleWrapper } from './Login.styles';
 import { useAuth } from '../../contexts/AuthContext';
 
@@ -7,74 +7,34 @@ import { useAuth } from '../../contexts/AuthContext';
 import Login from './Login';
 import { Button } from '@material-ui/core';
 
-const LoginOrSignup = () => {
-  const emailRef = useRef();
-  const passwordRef = useRef();
-  const passwordConfirmRef = useRef();
-  const { signup, logout, login, currentUser } = useAuth();
-  const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
-
-  const handleSignupSubmit = async (event) => {
-    event.preventDefault();
-
-    if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-      return setError('Passwords do not match');
-    }
-
-    try {
-      setError('');
-      setLoading(true);
-      await signup(emailRef.current.value, passwordRef.current.value);
-    } catch (error) {
-      setError('Failed to create an account');
-    }
-    setLoading(false);
-  };
+const LoginOrSignup = ({ handleClose }) => {
+  const { logout, currentUser } = useAuth();
 
   const handleLogout = async () => {
     try {
       await logout();
     } catch (error) {
-      console.log('This isnt working');
+      console.log(error);
     }
-    console.log('YOU LOGGED OUT!!!');
-  };
-
-  const Signup = () => {
-    return (
-      <div>
-        <h2>Create Account</h2>
-        {error && <h3 style={{ color: 'red' }}>{JSON.stringify(error)}</h3>}
-
-        <form onSubmit={handleSignupSubmit}>
-          <label htmlFor="email">Email</label>
-          <input id="email" type="email" ref={emailRef} />
-          <label htmlFor="password">Password</label>
-          <input id="password" type="password" ref={passwordRef} />
-          <label htmlFor="confirm">Confirm password</label>
-          <input id="confirm" type="password" ref={passwordConfirmRef} />
-
-          <Button disabled={loading} type="submit" variant="contained">
-            Create
-          </Button>
-        </form>
-      </div>
-    );
+    handleClose();
   };
 
   const Signout = () => {
     return (
       <div>
-        <h2>Sign Out</h2>
-        <Button onClick={handleLogout}>Sign Out</Button>
+        <h3>Sign out of Admin Mode</h3>
+        <Button variant="contained" onClick={handleLogout}>
+          Sign Out
+        </Button>
       </div>
     );
   };
 
   return (
     <StyleWrapper>
-      <div>{currentUser ? <Signout /> : <Login />}</div>
+      <div>
+        {currentUser ? <Signout /> : <Login handleClose={handleClose} />}
+      </div>
     </StyleWrapper>
   );
 };

@@ -15,6 +15,10 @@ export const StyleWrapper = styled.div`
     margin: auto;
   }
 
+  .field {
+    margin: 0.5rem;
+  }
+
   button {
     margin-top: 1rem;
   }
