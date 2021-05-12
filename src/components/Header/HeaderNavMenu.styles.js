@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   h4 {
     display: inline-flex;
     padding: 0 30px;
-    text-transform: capitalize;
+    text-transform: uppercase;
     user-select: none;
     cursor: pointer;
     transition: transform, letter-spacing 0.3s ease-in-out;
@@ -27,7 +27,7 @@ export const Wrapper = styled.div`
 
   a {
     text-decoration: none;
-    color: rgba(244, 244, 244, 0.45);
+    color: rgba(244, 244, 244, 0.65);
     margin-top: -10px;
   }
   a:hover {

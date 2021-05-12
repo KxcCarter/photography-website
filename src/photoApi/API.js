@@ -1,3 +1,6 @@
+import axios from 'axios';
+
+// Local Photos
 import photo1 from '../images/image1.jpg';
 import photo2 from '../images/image2.jpg';
 import photo3 from '../images/image3.jpg';
@@ -26,3 +29,11 @@ export const IMAGES = [
   { img: b3, altText: 'Class' },
   { img: v1, altText: 'Swagger' },
 ];
+
+export const tempPhotos = axios.create({
+  baseURL: 'https://fakerapi.it/api/v1/images',
+  params: {
+    _type: 'people',
+    _quantity: 24,
+  },
+});

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { StyleWrapper } from './Hero.styles';
 
+import { IMAGES } from '../../photoApi/API';
+
 const Hero: React.FC<{ image: string; title: string }> = (props: {
   image: string;
   title: string;
@@ -25,6 +27,13 @@ const Hero: React.FC<{ image: string; title: string }> = (props: {
       </div>
     </StyleWrapper>
   );
+};
+
+// This is just for templating purposes.
+// Remove for production.
+Hero.defaultProps = {
+  image: IMAGES[0].img,
+  title: IMAGES[0].altText,
 };
 
 export default Hero;

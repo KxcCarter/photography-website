@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
+// Ideally the width of this component would be 100vw, but unfortunately
+// this depends on the images that I am working with.
+
 export const Wrapper = styled.div`
-  max-width: 100vw;
+  max-width: 90vw;
+  margin: auto;
   text-align: center;
   overflow: hidden;
   padding-bottom: -20px;

@@ -9,6 +9,7 @@ import Landing from './pages/Landing';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Portfolio from './pages/Portfolio.tsx';
+import PhotoManager from './pages/PhotoManager';
 // import Blog from './pages/Blog';
 
 // This theme is really only neccesary for the form on the Contact page.
@@ -32,6 +33,9 @@ function App() {
           <Route exact path="/about" component={About} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/portfolio" component={Portfolio} />
+
+          {/* This route needs to be protected */}
+          <Route exact path="/manage" component={PhotoManager} />
           {/* <Route exact path="/blog" component={Blog} /> */}
 
           <Copyright />

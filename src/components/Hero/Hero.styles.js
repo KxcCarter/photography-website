@@ -44,7 +44,7 @@ export const StyleWrapper = styled.div`
   }
 
   @media (min-width: 1100px) {
-    width: 75vw;
+    width: 80vw;
     margin: auto;
   }
 
