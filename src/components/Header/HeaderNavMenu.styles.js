@@ -10,12 +10,13 @@ export const Wrapper = styled.div`
   h4 {
     display: inline-flex;
     padding: 0 30px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     user-select: none;
     cursor: pointer;
+    font-size: 1rem;
     transition: transform, letter-spacing 0.3s ease-in-out;
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
       letter-spacing: 0.05rem;
     }
   }
